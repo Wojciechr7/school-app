@@ -17,6 +17,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
 	<title>Osadnicy - gra przeglądarkowa</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>

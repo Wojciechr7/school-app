@@ -13,14 +13,14 @@ body {
   height: 100vh;
 }
 
-nav ul {
+nav#left-nav ul {
   position: relative;
   z-index: 1;
   width: inherit;
   height: 60px;
 }
 
-nav ul li {
+nav#left-nav ul li {
   line-height: 60px;
   padding: 0 20px;
   float: left;

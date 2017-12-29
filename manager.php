@@ -19,14 +19,19 @@ if (!isset($_SESSION['zalogowany'])) {
             src="https://code.jquery.com/jquery-3.2.1.js"
             integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
             crossorigin="anonymous"></script>
+    <script src="js/flatnav.js"></script>
+    <link rel="stylesheet" href="css/flatnav.css">
+    <link rel='stylesheet prefetch' href='http://daneden.github.io/animate.css/animate.min.css'>
     <script src="script.js"></script>
     <script src="class1/script.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/sidebar.css">
+
     <script src="js/galleria-1.5.7.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+
     <script src="js/sidebar.js" charset="utf-8"></script>
     <script src="js/bootstrap.min.js" charset="utf-8"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -35,7 +40,7 @@ if (!isset($_SESSION['zalogowany'])) {
 
 </head>
 <body>
-<nav>
+<nav id="left-nav">
     <ul>
         <li class="menu"><i class="fa fa-bars" aria-hidden="true"></i></li>
     </ul>
