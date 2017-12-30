@@ -31,28 +31,8 @@ while ($row = $data->fetch_assoc()) {
                 Galeria
                 <div class='fa fa-caret-down right'></div>
             </a>
-            <ul>
-                <li>
-                    <a href='#settings'>
-                        pozycja 1
-                    </a>
-                </li>
-                <li>
-                    <a href='#settings'>
-                        pozycja 2
-                    </a>
-                </li>
-                <li>
-                    <a href='#settings'>
-                        pozycja 3
-                    </a>
-                </li>
-                <li>
-                    <a href='#settings'>
-                        pozycja 4
-                    </a>
-                </li>
-                <li>
+            <ul class="gallery-output">
+                <li onclick="makeDir()">
                     <a href='#settings'>
                         <i class="fa fa-plus"></i>
                         Dodaj nowa pozycje
