@@ -1,4 +1,9 @@
 <?php
+session_start();
+
+$classCatName = $_POST['classCatName'];
+
+$_SESSION['classCatName'] = $classCatName;
 
 $msgCount = 0;
 
@@ -13,7 +18,7 @@ while ($row = $data->fetch_assoc()) {
 }
 
 ?>
-<h2 class="text-center" onclick="viewGallery()">Klasa 1</h2>
+<h2 class="text-center" style="margin: 15px" onclick="viewGallery()"><?=$_SESSION['classCatName']?></h2>
 
 
 <nav id="class-nav" class='animated bounceInDown'>
@@ -35,7 +40,7 @@ while ($row = $data->fetch_assoc()) {
                 <li onclick="makeDir()">
                     <a href='#settings'>
                         <i class="fa fa-plus"></i>
-                        Dodaj nowa pozycje
+                        Dodaj nową pozycję
                     </a>
                 </li>
             </ul>

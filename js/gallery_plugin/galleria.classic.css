@@ -13,7 +13,7 @@
 .galleria-theme-classic {
     position: relative;
     overflow: hidden;
-    background: #000;
+    background: rgba(0, 0, 0, 0.51);
 }
 .galleria-theme-classic img {
     -moz-user-select: none;

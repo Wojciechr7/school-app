@@ -47,10 +47,9 @@ if (!isset($_SESSION['zalogowany'])) {
 </nav>
 <div class="sidebar hide-sidebar">
     <ul class="centered">
-        <li id="class1"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Klasa 1</li>
-        <li><i class="fa fa-graduation-cap" aria-hidden="true"></i> Klasa 2</li>
-        <li><i class="fa fa-graduation-cap" aria-hidden="true"></i> Klasa 3</li>
-        <li><i class="fa fa-graduation-cap" aria-hidden="true"></i> Klasa 4</li>
+        <li class="class-cat"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Klasa 1</li>
+        <li class="class-cat"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Klasa 2</li>
+        <li class="class-cat"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Klasa 3</li>
         <li><i class="fa fa-sign-out" aria-hidden="true"></i> <a href="login/logout.php"><button class="btn btn-danger">Wyloguj się!</button></a></li>
     </ul>
 </div>

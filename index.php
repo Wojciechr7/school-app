@@ -24,7 +24,7 @@
 	
 	<br /><br />
 	
-	<form action="login/login.php" method="post">
+	<form action="login/login.php" method="post" style="color: white">
 
 		Login: <br /> <input class="form-control" type="text" name="login" /> <br />
 		Hasło: <br /> <input class="form-control" type="password" name="haslo" /> <br /><br />

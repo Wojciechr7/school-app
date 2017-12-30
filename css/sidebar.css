@@ -12,12 +12,15 @@ body {
   width: 100%;
   height: 100vh;
 }
+nav#left-nav {
+
+}
 
 nav#left-nav ul {
   position: relative;
-  z-index: 1;
   width: inherit;
   height: 60px;
+  z-index: 200;
 }
 
 nav#left-nav ul li {
@@ -32,6 +35,7 @@ nav#left-nav ul li {
 }
 
 .sidebar {
+  z-index: 100;
   position: absolute;
   top: 0;
   height: inherit;

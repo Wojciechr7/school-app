@@ -45,9 +45,9 @@ h1 {
 .galleria {
     max-width: 700px;
     height: 400px;
-    background: #000;
     margin-left: auto;
     margin-right: auto;
+    background: rgba(0, 0, 0, 0.51);
 }
 #list-home {
     max-width: 700px;
@@ -62,5 +62,5 @@ h1 {
 }
 .gallery-lower-buttons {
     width: max-content;
-    margin: 50px auto;
+    margin: 20px auto 50px auto;
 }

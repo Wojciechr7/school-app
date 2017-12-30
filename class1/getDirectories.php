@@ -2,7 +2,7 @@
 
 session_start();
 
-$path = "../uploads/" . $_SESSION['user'];
+$path = "../uploads/" . $_SESSION['user']."/".$_SESSION['classCatName'];
 
 $dirs = array();
 

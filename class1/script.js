@@ -1,11 +1,13 @@
 var currentImage;
 var lastGaleryChild;
 var currentLocation;
+var choosenCatName;
 
 
 $(document).ready(function () {
 
-    $('#class1').click(function () {
+    $('.class-cat').click(function () {
+        choosenCatName = $(this)[0].innerText.replace(/\s/gi,'_').substring(1, $(this)[0].innerText.length);
         loadFlatNav();
 
     });
@@ -29,7 +31,13 @@ function removeDir(e, element) {
 }
 
 function loadFlatNav() {
-    $(".content").load("class1/content.php", function (data) {
+    $.ajax({
+        type: "POST",
+        url: "class1/content.php",
+        data: {classCatName: choosenCatName}
+    }).done(function (data) {
+        $(".content").html(data);
+
         $('.menu-clicked').trigger('click');
         getDirectories();
     });
@@ -39,12 +47,13 @@ function makeDir() {
 
     var newDir = prompt("Wpisz nową kategorię galerii:");
     if (newDir != null && /\S/.test(newDir)) {
-
+        newDir = newDir.replace(/\s/gi,'_');
         $.ajax({
             type: "POST",
             url: "class1/makeDir.php",
             data: {newDir: newDir}
         }).done(function (data) {
+            console.log(data);
             loadFlatNav();
             $('.gallery-flatnav').trigger('click');
         });
