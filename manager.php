@@ -2,7 +2,7 @@
 
 session_start();
 
-if (!isset($_SESSION['zalogowany'])) {
+if (!isset($_SESSION['logged'])) {
     header('Location: index.php');
     exit();
 }
@@ -14,7 +14,7 @@ if (!isset($_SESSION['zalogowany'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>School app</title>
     <script
             src="https://code.jquery.com/jquery-3.2.1.js"
             integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
@@ -53,37 +53,10 @@ if (!isset($_SESSION['zalogowany'])) {
         <li><i class="fa fa-sign-out" aria-hidden="true"></i> <a href="login/logout.php"><button class="btn btn-danger">Wyloguj się!</button></a></li>
     </ul>
 </div>
-<?php
-echo "<h1>Witaj " . $_SESSION['user'] . '!</h1>';
-?>
+
 <main>
 <div class="content">
 
-
-
-
-    <!--<label class="btn btn-dark btn-file">
-        Browse <input type="file" id="sortpicture" name="sortpic" style="display: none;">
-    </label>
-<button class="btn btn-inverse" id="upload">Wyslij plik</button>
-
-<div id="newtable"></div>
-<br>
-<br>
-<br>
-<button class="btn btn-success" onclick="insertTable()"><i class="fa fa-plus"></i>  dodaj nowe</button>
-<input disabled type="text" id="id" placeholder="id">
-<input type="text" id="imie" placeholder="imie" onkeydown = "if (event.keyCode == 13) insertTable()">
-<input type="text" id="nazwisko" placeholder="nazwisko" onkeydown = "if (event.keyCode == 13) insertTable()">
-<input id="profileForm" type="text" class="rok" placeholder="YYYY/MM/DD"
-       data-fv-date="true"
-       data-fv-date-format="YYYY/MM/DD"
-       data-fv-date-message="The value is not a valid date"
-       onkeydown = "if (event.keyCode == 13) insertTable()">
-<div id="table-space"></div>
-<div id="miejsce"></div>
-
-<div id="gallery"></div>-->
 
 
 </div>
