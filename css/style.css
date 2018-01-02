@@ -1,25 +1,29 @@
 body {
-    background: #f7f7f7 url("../img/bg.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-y: scroll;
+    background: rgba(52,73,94,.8);
+    width: 100%;
+    height: 100%;
 }
-body::before {
-     content: '';
-     position: fixed;
-     z-index: -1;
-     top: 0;
-     left: 0;
-     background: #c0392b; /* IE Fallback */
-     background: rgba(52,73,94,.8);
-     width: 100%;
-     height: 100%;
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+    opacity: .2;
+}
+#bg::before {
+    content: '';
+    position: fixed;
+    display: block;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background: #c0392b;
+    background: rgba(52,73,94,.8);
+    width: 100%;
+    height: 100%;
 
 }
 
@@ -117,97 +121,3 @@ h1 {
 
 
 
-
-
-
-.owl-login {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-.owl {
-    margin: auto;
-    width: 211px;
-    height: 108px;
-    background-image: url("https://dash.readme.io/img/owl-login.png");
-    position: relative;
-}
-.owl .hand {
-    width: 34px;
-    height: 34px;
-    border-radius: 40px;
-    background-color: #472d20;
-    transform: scaleY(0.6);
-    position: absolute;
-    left: 14px;
-    bottom: -8px;
-    transition: 0.3s ease-out;
-}
-.owl .hand.password {
-    transform: translateX(42px) translateY(-15px) scale(0.7);
-}
-.owl .hand.hand-r {
-    left: 170px;
-}
-.owl .hand.hand-r.password {
-    transform: translateX(-42px) translateY(-15px) scale(0.7);
-}
-.owl .arms {
-    position: absolute;
-    top: 58px;
-    height: 41px;
-    width: 100%;
-    overflow: hidden;
-}
-.owl .arms .arm {
-    width: 40px;
-    height: 65px;
-    background-image: url("https://dash.readme.io/img/owl-login-arm.png");
-    position: absolute;
-    left: 20px;
-    top: 40px;
-    transition: 0.3s ease-out;
-}
-.owl .arms .arm.password {
-    transform: translateX(40px) translateY(-40px);
-}
-.owl .arms .arm.arm-r {
-    left: 158px;
-    transform: scaleX(-1);
-}
-.owl .arms .arm.arm-r.password {
-    transform: translateX(-40px) translateY(-40px) scaleX(-1);
-}
-.form {
-    margin: auto;
-    margin-top: -9px;
-    padding: 30px;
-    background-color: rgba(255, 255, 255, 0.38);
-    width: 300px;
-}
-.form .control {
-    margin-bottom: 10px;
-    position: relative;
-}
-.form .control label {
-    position: absolute;
-    font-size: 16px;
-    top: 11px;
-    left: 25px;
-    color: rgba(0,0,0,0.3);
-}
-.form .control input {
-    padding: 9px 6px 9px 30px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.login-err {
-    color: red;
-    font-size: 20px;
-}

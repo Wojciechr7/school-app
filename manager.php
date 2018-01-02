@@ -15,10 +15,8 @@ if (!isset($_SESSION['logged'])) {
 <head>
     <meta charset="UTF-8">
     <title>School app</title>
-    <script
-            src="https://code.jquery.com/jquery-3.2.1.js"
-            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-            crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/flatnav.js"></script>
     <link rel="stylesheet" href="css/flatnav.css">
     <link rel='stylesheet prefetch' href='http://daneden.github.io/animate.css/animate.min.css'>
@@ -40,6 +38,9 @@ if (!isset($_SESSION['logged'])) {
 
 </head>
 <body>
+<img src="img/bg.jpg" class="hidden-xs" id="bg" alt="">
+<img src="img/bg-mobile.jpg" class="visible-xs" id="bg" alt="">
+
 <nav id="left-nav">
     <ul>
         <li class="menu"><i class="fa fa-bars" aria-hidden="true"></i></li>
