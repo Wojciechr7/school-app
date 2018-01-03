@@ -16,7 +16,17 @@ $(document).ready(function() {
 
 });
 
+function createTable() {
+    $.ajax({
+        type: "POST",
+        url: "newtable.php"
+    }).done(function(data) {
 
+
+
+    });
+
+}
 
 function insertTable() {
     $.ajax({

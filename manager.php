@@ -78,6 +78,7 @@ if (!isset($_SESSION['logged'])) {
 
 
 <main>
+    <!--<button onclick="createTable()">add table</button>-->
     <div class="content">
 
 

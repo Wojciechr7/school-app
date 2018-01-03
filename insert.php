@@ -1,8 +1,12 @@
 <?php
 
+session_start();
+
 require_once "login/connect.php";
 
 $polaczenie = @new mysqli($host, $db_user, $db_password, $db_name);
+
+$tablename = $_SESSION['user']."_entries";
 
 
 if(isset($_POST['id']) && isset($_POST['imie']) && isset($_POST['nazwisko']) && isset($_POST['rok'])) {
@@ -17,7 +21,7 @@ if(isset($_POST['id']) && isset($_POST['imie']) && isset($_POST['nazwisko']) && 
 
 }
 
-$rezultat = $polaczenie->query("insert into tabelka (imie, nazwisko, rok) values('$imie', '$nazwisko', '$rok')");
+$rezultat = $polaczenie->query("insert into $tablename (imie, nazwisko, rok) values('$imie', '$nazwisko', '$rok')");
 
 
 

@@ -1,10 +1,14 @@
 <?php
 
+session_start();
+
 require_once "login/connect.php";
 
 $connection = @new mysqli($host, $db_user, $db_password, $db_name);
 
-$data = $connection->query("select id,imie,nazwisko,rok from tabelka");
+$tablename = $_SESSION['user']."_entries";
+
+$data = $connection->query("select id,imie,nazwisko,rok from $tablename");
 
 ?>
 <table class="table table-hover">
