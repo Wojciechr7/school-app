@@ -1,17 +1,3 @@
-
-body {
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #de6161;
-  background: -webkit-linear-gradient(left, #de6161, #2657eb);
-  background: -o-linear-gradient(right, #de6161, #2657eb);
-  background: -moz-linear-gradient(right, #de6161, #2657eb);
-  background: linear-gradient(to right, #de6161, #2657eb);
-  width: 100%;
-  height: 100vh;
-}
 nav#left-nav {
 
 }
