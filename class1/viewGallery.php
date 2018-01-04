@@ -6,7 +6,7 @@ $direct = $_POST['direct'];
 $_SESSION['direct'] = $direct;
 
 $directory = "../uploads/" . $_SESSION['user'] . "/".$_SESSION['classCatName']."/". $direct . "/";
-$images = glob($directory . "*.jpg");
+$images = glob($directory."*.{jpg,png,gif}", GLOB_BRACE);
 
 
 ?>
@@ -25,6 +25,7 @@ $images = glob($directory . "*.jpg");
     foreach ($images as $image) {
         echo '<img src=' . substr($image, 3) . ' data-title=' . substr($image, 11) . ' data-description=' . substr($image, 11) . '>';
     }
+
     ?>
 
 </div>
