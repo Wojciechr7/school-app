@@ -8,6 +8,12 @@ $(document).ready(function () {
 
     $('.class-cat').click(function () {
         choosenCatName = $(this)[0].innerText.replace(/\s/gi,'_').substring(1, $(this)[0].innerText.length);
+        if(choosenCatName[choosenCatName.length-1] == "_"){
+            choosenCatName = choosenCatName.substring(0, choosenCatName.length-1).toUpperCase();
+            $('.navbar-toggle').trigger('click');
+
+        }
+
         loadFlatNav();
 
     });

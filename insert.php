@@ -6,7 +6,7 @@ require_once "login/connect.php";
 
 $polaczenie = @new mysqli($host, $db_user, $db_password, $db_name);
 
-$tablename = $_SESSION['user']."_entries";
+$tablename = $_SESSION['user']."_".$_SESSION['classCatName']."_entries";
 
 
 if(isset($_POST['id']) && isset($_POST['imie']) && isset($_POST['nazwisko']) && isset($_POST['rok'])) {

@@ -1,8 +1,8 @@
 nav#class-nav {
   position: relative;
   left: 50%;
-  width: 360px;
-  margin: 0 0 100px -180px;
+  width: 300px;
+  margin: 0 0 100px -150px;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);

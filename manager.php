@@ -19,6 +19,7 @@ if (!isset($_SESSION['logged'])) {
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
     <title>School app</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/notepad.css">
     <link rel="stylesheet" href="css/owl.css">
     <script src="js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -78,6 +79,11 @@ if (!isset($_SESSION['logged'])) {
 
 
 <main>
+    <div id="paper-main" class="paper">
+        <div  class="paper-content">
+            <textarea id="paper-cnt" autofocus>Cześć !&#10;To twój notesik</textarea>
+        </div>
+    </div>
     <!--<button onclick="createTable()">add table</button>-->
     <div class="content">
 

@@ -6,7 +6,7 @@ require_once "login/connect.php";
 
 $connection = @new mysqli($host, $db_user, $db_password, $db_name);
 
-$tablename = $_SESSION['user']."_entries";
+$tablename = $_SESSION['user']."_".$_SESSION['classCatName']."_entries";
 
 $data = $connection->query("select id,imie,nazwisko,rok from $tablename");
 

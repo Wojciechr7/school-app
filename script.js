@@ -1,3 +1,5 @@
+var notepadExpanded = false;
+
 $(document).ready(function() {
     showData();
 
@@ -14,7 +16,26 @@ $(document).ready(function() {
         $('*').removeClass('password');
     });
 
+    $(document).on('click', function(e) {
+        if (e.target.id === 'paper-main') {
+            toggleNotepad();
+        }
+    })
+
+
 });
+function toggleNotepad() {
+        if(!notepadExpanded) {
+            $('.paper').css('right', '-20%');
+            notepadExpanded = true;
+        }
+        else
+        {
+            $('.paper').css('right', '-87%');
+            notepadExpanded = false;
+        }
+
+}
 
 function createTable() {
     $.ajax({

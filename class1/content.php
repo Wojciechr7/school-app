@@ -11,7 +11,9 @@ require_once "../login/connect.php";
 
 $connection = @new mysqli($host, $db_user, $db_password, $db_name);
 
-$data = $connection->query("select id,imie,nazwisko,rok from tabelka");
+$tablename = $_SESSION['user']."_".$_SESSION['classCatName']."_entries";
+
+$data = $connection->query("select id,imie,nazwisko,rok from $tablename");
 
 while ($row = $data->fetch_assoc()) {
     $msgCount++;
