@@ -2,7 +2,7 @@
 
 session_start();
 
-$tablename = $_SESSION['user']."_".$_SESSION['classCatName']."_entries";
+$tablename = "entries";
 
 require_once "login/connect.php";
 

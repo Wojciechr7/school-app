@@ -10,6 +10,7 @@
 
 
 <br><br>
+<div class="entry-controls">
 <button class="btn btn-success" onclick="insertTable()"><i class="fa fa-plus"></i>  dodaj nowe</button>
 <input disabled type="text" id="id" placeholder="id">
 <input type="text" id="imie" placeholder="imie" onkeydown = "if (event.keyCode == 13) insertTable()">
@@ -19,5 +20,6 @@
        data-fv-date-format="YYYY/MM/DD"
        data-fv-date-message="The value is not a valid date"
        onkeydown = "if (event.keyCode == 13) insertTable()">
+</div>
 <div id="table-space"></div>
 <div id="miejsce"></div>
