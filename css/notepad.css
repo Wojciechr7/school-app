@@ -3,16 +3,17 @@
 
 .paper {
     position: fixed;
-    right: -87%;
-    width: 90%;
-    height: 390px;
+    right: -67%;
+    width: 70%;
+    height: 70%;
     margin: 0 auto;
     background: #fafafa;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,.3);
     overflow: hidden;
-    z-index: 9999;
+    z-index: 2;
     cursor: pointer;
+    transition: all .2s;
 }
 .paper:before {
     content: '';
@@ -23,6 +24,12 @@
     background-size: 30px 30px;
     border-right: 3px solid #D44147;
     box-sizing: border-box;
+}
+.saving-info {
+    color: black;
+    position: absolute;
+    right: 10%;
+    top: 1%;
 }
 
 .paper-content {

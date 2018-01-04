@@ -1,10 +1,13 @@
 var notepadExpanded = false;
+var time = new Date();
+var lastSave = time.getSeconds();
+var saving = false;
 
 $(document).ready(function() {
     showData();
 
     showImages();
-
+    getNotepadData()
     setTimeout(function() {
         $('.menu').trigger('click');
     },0);
@@ -24,14 +27,33 @@ $(document).ready(function() {
 
 
 });
+
+function getNotepadData() {
+    $.ajax({
+        type: "POST",
+        url: "getNotepad.php"
+    }).done(function(data) {
+
+        $('#paper-cnt').val(data);
+
+    });
+
+
+
+
+
+}
+
+
 function toggleNotepad() {
+
         if(!notepadExpanded) {
-            $('.paper').css('right', '-20%');
+            $('.paper').css('right', '3%');
             notepadExpanded = true;
         }
         else
         {
-            $('.paper').css('right', '-87%');
+            $('.paper').css('right', '-67%');
             notepadExpanded = false;
         }
 
@@ -94,4 +116,31 @@ function delet(nr) {
 
 
     });
+}
+
+function prepateToSave() {
+    if(!saving) {
+        $('.saving-info').text("zapisywanie...");
+        saving = true;
+        setTimeout(function() {
+            saveNotepad();
+            $('.saving-info').text("zapisano");
+            saving = false;
+        }, 3000);
+    }
+
+}
+
+function saveNotepad() {
+
+        $.ajax({
+            type: "POST",
+            url: "saveNotepad.php",
+            data: {
+                'notepadValue': $('#paper-cnt').val()
+            }
+        }).done(function(data) {
+
+        });
+
 }

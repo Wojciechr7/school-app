@@ -80,8 +80,9 @@ if (!isset($_SESSION['logged'])) {
 
 <main>
     <div id="paper-main" class="paper">
+        <span class="saving-info">zapisano</span>
         <div  class="paper-content">
-            <textarea id="paper-cnt" autofocus>Cześć !&#10;To twój notesik</textarea>
+            <textarea onkeydown="prepateToSave()" id="paper-cnt" autofocus></textarea>
         </div>
     </div>
     <!--<button onclick="createTable()">add table</button>-->
